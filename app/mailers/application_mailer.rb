@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "danial.azeem@devsinc.com"
+  default from: Rails.application.credentials.dig(:google_smtp, :email)
   layout "mailer"
 end
